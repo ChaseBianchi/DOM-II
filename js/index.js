@@ -42,3 +42,21 @@ navArr.forEach((elem) => {
 let funBus = document.querySelector('.logo-heading');
 // funBus.style.position='relative';
 funBus.addEventListener('click', () => funBus.style.fontSize=`${Math.random()*10}rem`);
+
+
+//bus pic goes poof when pressing any button, and reappears when released.
+
+let intro = document.querySelector('.intro');
+let introImg = intro.querySelector('img');
+let vanish = ()=>introImg.style.display='none';
+let appear = ()=>introImg.style.display='block';
+document.addEventListener('keydown',()=>{vanish()},false);
+document.addEventListener('keyup',()=>{appear()},false); 
+
+/// mouse enter and exit changing text
+
+let textBox = document.querySelector('.text-content');
+let letsGo = textBox.querySelector('h2');
+
+textBox.addEventListener('mouseenter',()=>{letsGo.innerHTML=`Let's Go! Come on!!!`}, false);
+textBox.addEventListener('mouseleave',()=>{letsGo.innerHTML=`Been there, done that...`}, false);
