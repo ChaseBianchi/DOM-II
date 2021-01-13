@@ -60,3 +60,22 @@ let letsGo = textBox.querySelector('h2');
 
 textBox.addEventListener('mouseenter',()=>{letsGo.innerHTML=`Let's Go! Come on!!!`}, false);
 textBox.addEventListener('mouseleave',()=>{letsGo.innerHTML=`Been there, done that...`}, false);
+
+// Buckle up on scroll
+
+let introText = intro.querySelector('h2');
+document.addEventListener('wheel',()=>{
+    introText.innerText="Welcome To Fun Bus! Buckle your seatbelt!";
+    introText.style.backgroundColor='#FFEBCD';
+    introText.style.paddingTop='10px';
+    introText.style.textAlign='center';
+}, false);
+
+// Alert buttons
+let btn1 = document.querySelector('.btn1');
+let btn2 = document.querySelector('.btn2');
+let btn3 = document.querySelector('.btn3');
+
+btn1.addEventListener('click',()=>{alert(`Don't forget your sun screen!`)},false);
+btn2.addEventListener('click',()=>{alert(`You sure you can take this, bro?`)},false);
+btn3.addEventListener('click',()=>{alert(`Surf's up, dudeeeeeeeee`)},false);
