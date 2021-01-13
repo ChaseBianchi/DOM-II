@@ -23,10 +23,22 @@ let nava = nav.querySelectorAll('a');
 // let navLink = document.querySelectorAll('.nav-link');
 // body.onload = ()=>navaLink.style.padding = '10px';
 
-Array.from(nava).forEach((elem) => {
+
+const navArr = Array.from(nava);
+
+// navArr.forEach((a)=>a.style.padding='10px';));
+
+document.querySelector('.nav-container').style.flexFlow='row wrap';
+navArr.forEach((elem) => {
     elem.addEventListener('mouseover', (event) => {
         elem.style.color = 'white';
-        elem.style.backgroundColor = 'navy';
+        elem.style.backgroundColor = '#17ABD1';
         // elem.style.padding = '10px';
     })
 });
+
+// Fun Bus heading random size on click
+
+let funBus = document.querySelector('.logo-heading');
+// funBus.style.position='relative';
+funBus.addEventListener('click', () => funBus.style.fontSize=`${Math.random()*10}rem`);
